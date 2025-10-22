@@ -74,11 +74,7 @@ export function Navbar() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6 }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled
-            ? "bg-background/80 backdrop-blur-md shadow-lg border-b border-box"
-            : "bg-transparent"
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${isScrolled ? "bg-primary shadow-lg" : "bg-transparent"}`}
       >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16 md:h-20">
@@ -88,10 +84,12 @@ export function Navbar() {
                 <motion.button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className={`relative px-3 py-2 font-medium transition-colors ${
-                    activeSection === item.href.substring(1)
-                      ? "text-primary"
-                      : "text-white hover:text-primary"
+                  className={`group relative px-3 py-2 font-medium transition-colors duration-300 after:content-[""] after:absolute after:left-0 after:bottom-0 after:h-0.5 after:bg-primary after:w-0 group-hover:after:w-full after:transition-[width] after:duration-300 after:ease-in-out ${
+                    isScrolled
+                      ? "text-black hover:text-black"
+                      : activeSection === item.href.substring(1)
+                        ? "text-primary"
+                        : "text-white hover:text-primary"
                   }`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -109,14 +107,14 @@ export function Navbar() {
               ))}
             </div>
 
-            {/* Group 2: Center Logo - Azeez Aderemi */}
-            <Link href="/" className="flex-1 flex justify-center">
+            {/* Group 2: Center Logo - RayDar */}
+            <Link href="/" className="flex-1 flex justify-center group" aria-label="RayDar Home">
               <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="flex items-center gap-2 cursor-pointer"
+                whileHover={{ scale: 1.06 }}
+                className={`relative flex items-center gap-2 cursor-pointer after:content-[""] after:absolute after:left-0 after:bottom-0 after:h-0.5 after:bg-primary after:w-0 group-hover:after:w-full after:transition-[width] after:duration-300 after:ease-out`}
               >
-                <span className="font-bold text-xl text-black">
-                  Azeez Aderemi
+                <span className={`font-extrabold text-2xl md:text-3xl tracking-tight drop-shadow ${isScrolled ? "text-black" : "text-white"}`}>
+                  RayDar
                 </span>
               </motion.div>
             </Link>
@@ -127,10 +125,12 @@ export function Navbar() {
                 <motion.button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className={`relative px-3 py-2 font-medium transition-colors ${
-                    activeSection === item.href.substring(1)
-                      ? "text-primary"
-                      : "text-white hover:text-primary"
+                  className={`group relative px-3 py-2 font-medium transition-colors duration-300 after:content-[""] after:absolute after:left-0 after:bottom-0 after:h-0.5 after:bg-primary after:w-0 group-hover:after:w-full after:transition-[width] after:duration-300 after:ease-in-out ${
+                    isScrolled
+                      ? "text-black hover:text-black"
+                      : activeSection === item.href.substring(1)
+                        ? "text-primary"
+                        : "text-white hover:text-primary"
                   }`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -186,10 +186,12 @@ export function Navbar() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
                     onClick={() => scrollToSection(item.href)}
-                    className={`text-left px-4 py-3 rounded-lg transition-colors ${
-                      activeSection === item.href.substring(1)
-                        ? "bg-primary/10 text-primary"
-                        : "text-white hover:bg-box hover:text-primary"
+                    className={`group relative text-left px-4 py-3 rounded-lg transition-colors duration-300 after:content-[""] after:absolute after:left-0 after:bottom-0 after:h-0.5 after:bg-primary after:w-0 group-hover:after:w-full after:transition-[width] after:duration-300 after:ease-in-out ${
+                      isScrolled
+                        ? "text-black hover:text-black hover:bg-primary/20"
+                        : activeSection === item.href.substring(1)
+                          ? "bg-primary/10 text-primary"
+                          : "text-white hover:bg-box hover:text-primary"
                     }`}
                   >
                     {item.name}

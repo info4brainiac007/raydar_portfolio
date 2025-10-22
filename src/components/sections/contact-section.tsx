@@ -34,19 +34,19 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "hello@yourname.com",
-    href: "mailto:hello@yourname.com"
+    value: "Aderemiazeez95@gmail.com",
+    href: "Aderemiazeez95@gmail.com"
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+91 98765 43210",
-    href: "tel:+919876543210"
+    value: "+234 8136313173 ",
+    href: "tel:+2348136313173 "
   },
   {
     icon: MapPin,
     label: "Location",
-    value: "Mumbai, India",
+    value: "Kigali, Rwanda",
     href: "#"
   }
 ];

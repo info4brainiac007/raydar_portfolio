@@ -4,6 +4,7 @@ import { AboutSection } from "@/components/sections/about-section";
 import { ProjectsSection } from "@/components/sections/projects-section";
 import { ExperienceSection } from "@/components/sections/experience-section";
 import { ContactSection } from "@/components/sections/contact-section";
+import TechCarousel from "@/components/ui/tech-carousel";
 
 export default function Home() {
   return (
@@ -13,10 +14,11 @@ export default function Home() {
         <section id="home">
           <HeroSection />
         </section>
+        <TechCarousel />
         <section id="about">
           <AboutSection />
         </section>
-        <section id="projects">
+        <section id="projects" className="bg-background">
           <ProjectsSection />
         </section>
         <section id="experience">

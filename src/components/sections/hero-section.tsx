@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
@@ -110,7 +111,7 @@ export function HeroSection() {
       >
         {/* Left 35% - bg-color */}
         <motion.div 
-          className="w-[35vw] h-full" 
+          className="w-[40vw] h-full" 
           style={{ backgroundColor: 'var(--background)' }}
           initial={{ x: -100 }}
           animate={{ x: 0 }}
@@ -118,7 +119,7 @@ export function HeroSection() {
         ></motion.div>
         {/* Center 30% - main-color */}
         <motion.div 
-          className="w-[30vw] h-full" 
+          className="w-[20vw] h-full" 
           style={{ backgroundColor: 'var(--primary)' }}
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
@@ -126,7 +127,7 @@ export function HeroSection() {
         ></motion.div>
         {/* Right 35% - bg-color */}
         <motion.div 
-          className="w-[35vw] h-full" 
+          className="w-[40vw] h-full" 
           style={{ backgroundColor: 'var(--background)' }}
           initial={{ x: 100 }}
           animate={{ x: 0 }}
@@ -143,7 +144,7 @@ export function HeroSection() {
         variants={containerVariants}
       >
         {/* Left Strip - 50% vw */}
-        <div className="w-[35vw] flex flex-col justify-center items-center px-8">
+        <div className="w-[32vw] flex flex-col justify-center items-center px-8">
           <motion.div
             className="space-y-6 text-center max-w-md"
             variants={slideInLeft}
@@ -180,8 +181,26 @@ export function HeroSection() {
           </motion.div>
         </div>
 
+        {/* Center Strip - Developer Image */}
+        <div className="w-[35vw] h-full flex items-end justify-center">
+          <Image
+            src="/img/Aderemi.png"
+            alt="RayDar Developer"
+            width={1200}
+            height={1200}
+            priority
+            className="w-[40vw] h-[90vh] object-contain mix-blend-multiply opacity-100 contrast-110 brightness-110"
+            style={{
+              filter: 'drop-shadow(0 0 20px rgba(0,0,0,0.3))',
+              maskImage: 'radial-gradient(ellipse at center, black 60%, transparent 100%)',
+              WebkitMaskImage: 'radial-gradient(ellipse at center, black 60%, transparent 100%)',
+            }}
+          />
+        </div>
+
+
         {/* Right Strip - 50% vw */}
-        <div className="absolute right-0 top-0 h-full w-[35vw] flex flex-col justify-center items-center px-8">
+        <div className="absolute right-0 top-0 h-full w-[30vw] flex flex-col justify-center items-center px-8">
     {/* Your content here */}
   
           <motion.div

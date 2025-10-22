@@ -49,6 +49,20 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* Tech Carousel Animation */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+.animate-scroll-left {
+  animation: scroll-left 5s linear infinite;
+}
+
 :root {
   --radius: 0.625rem;
   /* Light mode - using Webflow design tokens */
